@@ -45,9 +45,9 @@ func broadcast(senderID, senderName, msg string) {
 }
 
 func main() {
-	port := "8080"
+	port := "6580"
 
-	cert, err := tls.LoadX509KeyPair("../cert.pem", "../key.pem")
+	cert, err := tls.LoadX509KeyPair("/app/cert.pem", "/app/key.pem")
 	if err != nil {
 		fmt.Println("Error loading certificate and key:", err)
 		os.Exit(1)

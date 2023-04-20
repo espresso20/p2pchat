@@ -4,6 +4,8 @@ WORKDIR /app
 
 # Copy all files
 COPY . .
+COPY cert.pem /app
+COPY key.pem /app
 
 # Run the setup script
 RUN ./setup.sh
